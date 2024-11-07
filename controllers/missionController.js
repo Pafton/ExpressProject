@@ -206,8 +206,10 @@ exports.setnewMission = function(req, res) {
         image: image ? [image] : []
     };
 
+    if(req.file){
+        newMission.image.push(req.file.filename)
+    }
+
     missions.push(newMission);
-    console.log(newMission);
-    console.log(missions);
     res.redirect('/');
 };

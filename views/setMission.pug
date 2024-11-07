@@ -8,7 +8,7 @@ link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/
         .alert.alert-danger #{error}
         
     h1 Dodaj nową misję
-    form(action='/missions', method='POST') 
+    form(action='/missions', method='POST',enctype="multipart/form-data") 
         .form-group
             label(for='name') Nazwa misji:
             input(type='text', name='name', required=true, class='form-control')
