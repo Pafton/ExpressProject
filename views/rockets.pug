@@ -1,0 +1,17 @@
+title= title
+link(rel='stylesheet', href='/css/styles.css')
+link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+
+.container.rocket-list
+    .row
+        .col-md-4.custom-border
+            h2 Lista Rakiet
+            ul#rocket-list
+                each rocket in rockets
+                    li
+                        a(href=`/rockets/${rocket.id}`) #{rocket.name}
+        .col-md-8.text-center
+            h2 Szczegóły Rakiety
+            div#rocket-details
+                p Wybierz rakietę z listy, aby zobaczyć szczegóły.
+    a.btn.btn-secondary(href='/') Powrót do strony głównej

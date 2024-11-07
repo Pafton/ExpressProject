@@ -1,0 +1,37 @@
+title Wyświetl informację o misji
+link(rel='stylesheet', href='/css/styles.css')
+link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+
+.container
+    h1 Wyszukaj misję
+    form(action='/missions/getOneMission', method='GET') 
+        .form-group
+            label(for='name') Nazwa misji:
+            input(type='text', name='name', class='form-control' placeholder='Np. Apollo')
+
+        .form-group
+            label(for='startDate') Data początkowa:
+            input(type='date', name='startDate', class='form-control')
+            
+        .form-group
+            label(for='endDate') Data końcowa:
+            input(type='date', name='endDate', class='form-control')
+
+        div
+            button(type='submit', class='btn btn-primary') Wyszukaj
+    a.btn.btn-secondary(href='/') Powrót do strony głównej
+
+    if missions && searchPerformed
+        h2 Wyniki wyszukiwania
+        each mission in missions
+            .mission-info
+                p Nazwa misji: #{mission.name}
+                p Data startu: #{mission.startDate}
+                p Opis: #{mission.description}
+                p Załoga:
+                ul
+                    each member in mission.crew
+                        li #{member.name} - #{member.role}
+    else if searchPerformed
+        p Brak wyników dla podanych kryteriów.
+

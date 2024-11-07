@@ -1,0 +1,28 @@
+title Dodaj Misję
+link(rel='stylesheet', href='/css/styles.css')
+link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+
+.container
+    
+    if(error)
+        .alert.alert-danger #{error}
+        
+    h1 Dodaj nową misję
+    form(action='/missions', method='POST') 
+        .form-group
+            label(for='name') Nazwa misji:
+            input(type='text', name='name', required=true, class='form-control')
+        .form-group
+            label(for='startDate') Data startu:
+            input(type='date', name='startDate', required=true, class='form-control')
+        .form-group
+            label(for='description') Opis misji:
+            textarea(name='description', required=true, class='form-control', rows='4')
+        .form-group
+            label Załoga (dodaj członków, oddzielając przecinkiem):
+            input(type='text', name='crew', placeholder='Imię i rola, np. Neil Armstrong, Commander', class='form-control')
+        .form-group 
+            input(type='file', name='image')
+        div
+             button(type='submit', class='btn btn-primary') Dodaj misję
+    a.btn.btn-secondary(href='/') Powrót do strony głównej

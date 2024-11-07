@@ -1,0 +1,160 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: lightgray;  
+    color: #333333; 
+}
+
+.img{
+    height: 800px;
+    width: 600px;
+    border-radius: 16px;
+    box-shadow: 4px 4px 10px grey;
+}
+
+.small-image {
+    width: 10%; 
+    max-width: 100%; 
+    height: auto; 
+  }
+
+.custom-border {
+    border: 2px solid #000;
+  }
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: darkblue; 
+}
+
+a.btn {
+    margin-top: 10px;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+th {
+    background-color: lightblue; 
+    color: darkblue;  
+}
+
+
+td:hover {
+    background-color: #f7f7f7; 
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+}
+
+.custom-border {
+    border: 2px solid #000;
+  }
+
+.rocket-list li {
+    margin-bottom: 10px;
+}
+
+.rocket-list a {
+    color: royalblue;  
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.rocket-list a:hover {
+    color: darkorange; 
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+tr:nth-child(even) {
+    background-color: lightgray;  
+}
+
+tr:hover {
+    background-color: lightyellow;  
+}
+
+.btn-primary {
+    background-color: mediumslateblue; 
+    border-color: mediumslateblue;
+}
+
+.btn-primary:hover {
+    background-color: slateblue;  
+    border-color: slateblue;
+}
+
+.btn-secondary {
+    background-color: slategray; 
+    border-color: slategray;
+}
+
+.btn-secondary:hover {
+    background-color: dimgray;  
+    border-color: dimgray;
+}
+
+.container.text-center {
+    margin-top: 20px;
+}
+
+.container > .row {
+    margin-top: 20px;
+}
+
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid lightgray;
+    margin-bottom: 15px;
+}
+
+a.btn.btn-secondary {
+    margin-top: 20px;
+}
+
+form {
+    background-color: #f9f9f9;  
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+}
+
+.form-group label {
+    color: darkblue;  
+}
+
+input[type="text"], input[type="date"], textarea {
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+}
+
+input[type="text"]:focus, input[type="date"]:focus, textarea:focus {
+    border-color: royalblue;  
+}
+

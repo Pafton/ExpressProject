@@ -1,0 +1,9 @@
+title= title
+link(rel='stylesheet', href='/css/styles.css')
+link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+
+h1 Galeria Zdjęć
+.gallery.text-center
+    each image in mission.image
+        img(src=`/images/${image}`, alt=mission.name, class='img')
+a.btn.btn-secondary(href='/') Powrót do strony głównej

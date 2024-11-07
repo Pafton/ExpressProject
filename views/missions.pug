@@ -1,0 +1,25 @@
+title= title
+link(rel='stylesheet', href='/css/styles.css')
+link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+
+.container.text-center
+    h1= message
+    p Opis różnych misji kosmicznych.
+
+    img(src='/images/ziemia.jpg', alt='Kosmos', class='img-fluid my-4 small-image')
+    
+    h2 Misje kosmiczne
+    p Tutaj znajdziesz informacje o historycznych misjach, ich celach i wynikach.
+
+    h3 Najważniejsze misje:
+    ul.list-group.list-group-flush
+        li.list-group-item Apollo 11 - Pierwsze lądowanie na Księżycu
+        li.list-group-item Voyager 1 - Sonda przekraczająca granice Układu Słonecznego
+        li.list-group-item Mars Rover - Eksploracja Marsa
+    
+    h3 Zarządzaj misjami:
+    .btn-group.my-4
+        a.btn.btn-primary(href='/missions/getMission') Wyświetl misje
+        a.btn.btn-primary(href='/missions/getOneMission') Wyświetl konkretną misję
+        a.btn.btn-primary(href='/missions/setMission') Dodaj misję
+        a.btn.btn-primary(href='/missions/deleteMission') Usuń misję

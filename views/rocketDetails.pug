@@ -1,0 +1,26 @@
+title= rocket.name
+link(rel='stylesheet', href='/css/styles.css')
+link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+
+.container
+    h1 Szczegóły Rakiety: #{rocket.name}
+    table(class='table')
+        tr
+            th Nazwa
+            td #{rocket.name}
+        tr
+            th Typ
+            td #{rocket.type}
+        tr
+            th Rok produkcji
+            td #{rocket.year}
+        tr
+            th Wysokość (m)
+            td #{rocket.height}
+        tr
+            th Ładowność (kg)
+            td #{rocket.payload}
+        tr
+            th Opis
+            td #{rocket.description || 'Brak opisu'}
+    a.btn.btn-secondary(href='/rockets') Powrót do listy rakiet

@@ -1,0 +1,25 @@
+title= title
+link(rel='stylesheet', href='/css/styles.css')
+link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+
+.container
+    table
+        tr
+            th Nazwa
+            th Opis
+            th Data startu
+            th Zaloga
+
+        each mission in missions 
+            tr 
+                td 
+                    a(href=`/missions/gallery/${mission.id}`) #{mission.name}
+                td #{mission.description}
+                td #{mission.startDate}
+                td  
+                    each crew in mission.crew
+                        p #{crew.name} - #{crew.role}
+
+    a.btn.btn-secondary(href='/') Powrót do strony głównej
+    a.btn.btn-secondary(onclick='fetchMissions()', href='/missions/missionJSON') JSON
+    a.btn.btn-secondary(onclick='fetchMissions()', href='/missions/missionsJSON') Pobierz JSON

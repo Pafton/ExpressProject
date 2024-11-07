@@ -1,0 +1,15 @@
+title Usuwanie Misji
+link(rel='stylesheet', href='/css/styles.css')
+link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+
+.container
+    h1= message
+    if missions && missions.length > 0
+        ul
+            each mission in missions
+                li
+                    a(href=`/missions/delete/${mission.id}`, onclick='return confirm("Czy na pewno chcesz usunąć tę misję?");') #{mission.name}
+    else
+        p Brak misji do wyświetlenia.
+
+    a.btn.btn-secondary(href='/') Powrót do strony głównej
