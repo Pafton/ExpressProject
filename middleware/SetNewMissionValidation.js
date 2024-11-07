@@ -6,11 +6,11 @@ module.exports = function validateCrewFormat(req, res, next) {
         error = "Błąd: Pole 'Załoga' jest wymagane.";
     } else {
         const crewMembers = crew.split(',');
-        const regex = /^[A-Za-z]+(\s"[A-Za-z\s]+")?\s[A-Za-z]+\s-\s[A-Za-z]+$/;
+        const regex = /^[A-Za-zĄ-Żą-ż\s]+(?:\s"[A-Za-zĄ-Żą-ż\s]+")?\s[A-Za-zĄ-Żą-ż\s]+ - [A-Za-zĄ-Żą-ż\s]+$/;
 
         for (const member of crewMembers) {
             if (!regex.test(member.trim())) {
-                error = "Błąd: Format danych w polu 'Zaloga' jest nieprawidłowy. Użyj formatu 'Imię Nazwisko - Rola; Imię Nazwisko - Rola; ...'.";
+                error = "Błąd: Format danych w polu 'Załoga' jest nieprawidłowy. Użyj formatu 'Imię Nazwisko - Rola' lub 'Fraza - Opis'.";
                 break;
             }
         }
